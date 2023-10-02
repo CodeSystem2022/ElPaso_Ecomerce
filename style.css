@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Josefin+Sans:wght@200&family=Poppins:wght@500;700&family=Roboto&display=swap');
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+.container{
+
+    width: 100%;
+    max-width: 2000px;
+}
+
+/* Basic styling */
+* { box-sizing: border-box; padding: 0; margin: 0;} 
+header{position: fixed; top: 0; left: 0; width: 100%; justify-content: space-around; transition: 0.7s; z-index: 10; opacity: 0.5; }
+body { font-family: sans-serif; display: flex; flex-direction: column; min-height: 100vh;} 
+nav { background: #222; padding: 5px 20px; } 
+ul { list-style-type: none; } 
+a { color: white; text-decoration: none; } 
+a:hover { text-decoration: none; color: grey; } 
+.logo a:hover { text-decoration: none; } 
+.menu li { font-size: 16px; padding: 15px 5px; white-space: nowrap; } 
+.logo a, .toggle a { font-size: 20px;} 
+.button.secondary { border-bottom: 1px #222 solid; background-color:#006d6d; text-align: center; }
+p{justify-content: center; align-items: center;}
+
+
+/* Mobile menu */ 
+.menu { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; } 
+.toggle { order: 1; } 
+.item.button { order: 2; } 
+.item { width: 100%; text-align: center; order: 3; display: none; } 
+.item.active { display: block; }
+.btn1:hover {
+    background-position: right;
+    color: black;
+    font-weight: 700;
+}
+.btn1 {
+
+    font-size: 16px;
+    border: 2px solid #ff8b07;
+    color: white;
+    cursor: pointer; 
+    background: linear-gradient(to right, transparent 50%, #ff8b07 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+}
+
+.btn2 {
+    width: 200px;
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #dadd18;
+    color: rgb(223, 255, 148);
+    cursor: pointer;
+    background: linear-gradient(to right,  #dadd18 50%, transparent 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 0.5s;
+    position: absolute;
+    text-align: center;
+    
+    
+    
+}
+
+.btn2:hover {
+    background-position: left;
+    color: black;
+    font-weight: 700;
+}
+
+
+.zona1{
+    position: relative;
+    width:auto;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.nosotros{
+
+    margin-left: 100px;
+    position: relative;
+    width:300px;            /*Ver modificacion*/
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Josefin Sans', sans-serif
+}
+.nosotros p{
+    margin-left: 100px;
+    position: relative;
+    width:300px;            /*Ver modificacion*/
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Josefin Sans', sans-serif
+}
+
+
+
+
+
+
+
+.mapa{
+margin-left: 600px;
+}
+
+/* Tablet menu */ 
+@media all and (min-width: 600px) { 
+    .menu { justify-content: center; } 
+    .logo { flex: 1; } 
+    .toggle { flex: 1; text-align: right; } 
+    .item.button { width: auto; order: 1; display: block; } 
+    .toggle { order: 2; } .button.secondary { border: 0; } 
+    .button a { padding: 7.5px 15px; background: teal; border: 1px #006d6d solid; } 
+    .button.secondary a { background: transparent; } 
+    .button a:hover { text-decoration: none; } 
+    .button:not(.secondary) 
+    a:hover { background: #006d6d; border-color: #005959; } 
+    .button.secondary a:hover { color: #ddd; } }
+    .btn1:hover {
+        background-position: right;
+        color: black;
+        font-weight: 700;
+    }
+    .btn1 {
+   
+        font-size: 16px;
+        border: 2px solid #ff8b07;
+        color: white;
+        cursor: pointer; 
+        background: linear-gradient(to right, transparent 50%, #ff8b07 50%);
+        background-size: 200%;
+        background-position: left;
+        transition: background-position 0.5s;
+    }
+
+    .btn2 {
+        width: 200px;
+        padding: 15px 25px;
+        margin: 20px;
+        font-size: 16px;
+        outline: none;
+        border: 2px solid #dadd18;
+        color: rgb(223, 255, 148);
+        cursor: pointer;
+        background: linear-gradient(to right,  #dadd18 50%, transparent 50%);
+        background-size: 200%;
+        background-position: right;
+        transition: background-position 0.5s;
+        position: absolute
+        
+    }
+    
+    .btn2:hover {
+        background-position: left;
+        color: black;
+        font-weight: 700;
+    }
+
+    .zona1{
+        position: relative;
+        width:auto;
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .nosotros{
+    
+        margin-left: 100px;
+        position: relative;
+        width:300px;            /*Ver modificacion*/
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        font-family: 'Josefin Sans', sans-serif
+    }
+    .nosotros p{
+        margin-left: 100px;
+        position: relative;
+        width:300px;            /*Ver modificacion*/
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        font-family: 'Josefin Sans', sans-serif
+    }
+
+   
+
+
+
+
+
+.mapa{
+    margin-left: 600px;
+   }
+    
+
+
+
+/* Desktop menu */ 
+@media all and (min-width: 900px) { 
+    .item { display: block; width: auto; } 
+    .toggle { display: none; } 
+    .logo { order: 0; } 
+    .item { order: 1; } 
+    .button { order: 2; } 
+    .menu li { padding: 15px 10px; } 
+    .menu li.button { padding-right: 0; } }
+
+
+    .zona1{
+        position: relative;
+        width:auto;
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .nosotros{
+    
+        margin-left: 100px;
+        position: relative;
+        width:300px;            /*Ver modificacion*/
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        font-family: 'Josefin Sans', sans-serif
+    }
+    .nosotros p{
+        margin-left: 100px;
+        position: relative;
+        width:300px;            /*Ver modificacion*/
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        font-family: 'Josefin Sans', sans-serif
+    }
+
+   
+
+ 
+
+
+.mapa{
+    margin-left: 600px;
+   }

@@ -1,0 +1,13 @@
+<div class="col-lg-6 d-flex">
+            <div class="content mx-auto align-self-center">
+              
+              <h1 class="display-4 fw-bold mb-4">LA AVENTURA NOS INSPIRA</h1>
+              <p class="lead mb-4">
+                La montaña, majestuosa y eterna, nos enseña que en la vida, como en la escalada, 
+                los obstáculos pueden parecer insuperables desde lejos, pero con determinación, pasión 
+                y un paso a la vez, podemos llegar a las cimas más altas y abrazar vistas que nos dejan sin aliento,
+                recordándonos que nuestras limitaciones son solo fronteras en nuestra mente.
+              </p>
+              
+
+            </div>

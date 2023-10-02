@@ -1,0 +1,15 @@
+/*Estilos del footer*/
+footer{
+    background-color: #419285;
+    color: #fff;
+    padding: 1.3rem;
+    text-align: center;
+    a{
+        color: black;
+        text-decoration: none;
+        &:hover{
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}

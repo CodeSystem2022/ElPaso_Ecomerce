@@ -1,0 +1,66 @@
+
+/*Resets*/
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+/* Fuentes
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+/*Tipografia
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem; /* Se utiliza la unidad de medida 1rem=16px */
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    margin-bottom: 0.9375rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.875rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+h5{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+p {
+    margin-bottom: 0.9375rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+

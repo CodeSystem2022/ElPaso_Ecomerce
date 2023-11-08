@@ -5,12 +5,17 @@
 }
 
 body {
-  background-image: url('/Contacto/static/css/imagenes/fondo.jpg');
+  background-image: url('/Contacto/static/css/imagenes/cañon11.png');
+  width:30%;
+  height:30%;
+  margin:0 auto;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .form-register {
   width: 400px;
-  background: #24303c;
+  background: rgb(2, 50, 15);
   padding: 30px;
   margin: auto;
   margin-top: 100px;
@@ -27,7 +32,7 @@ body {
 
 .controls {
   width: 100%;
-  background: #24303c;
+  background: #0c390f;
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 16px;

@@ -30,7 +30,7 @@ def homeDos():
 '''
 # Legajo generado automaticamente
 
-legajo = random.randint(2000, 4500)
+orden = random.randint(2000, 4500)
 
 #Method Post
 @app.route('/products', methods=['POST'])
@@ -38,24 +38,22 @@ def addProduct():
     products = db['products']
     name = request.form['name']
     lastName = request.form['lastName']
-    edad = request.form['edad']
     dni = request.form['dni']
     email = request.form['email']
     pais = request.form['pais']
-    description = request.form['description']
+    message = request.form['message']
 
-    if name and lastName and edad and dni and email and pais and description and legajo:
-        product = Product(name, lastName, edad, dni, email, pais, description, legajo)
+    if name and lastName and dni and email and pais and message and orden:
+        product = Product(name, lastName, dni, email, pais, message, orden)
         products.insert_one(product.toDBCollection())
         response = jsonify({
             'name' : name,
             'lasName': lastName,
-            'edad': edad,
             'dni': dni,
             'email': email,
             'pais': pais,
-            'description' : description,
-            'legajo': legajo
+            'message' : message,
+            'orden': orden
             
             
         })                                                                             # Alguno cambios
@@ -105,14 +103,13 @@ def edit(product_name):
     products = db['products']
     name = request.form['name']
     lastName = request.form['lastName']
-    edad = request.form['edad']
     dni = request.form['dni']
     email = request.form['email']
     pais = request.form['pais']
-    description = request.form['description']
+    message = request.form['message']
 
-    if name and lastName and edad and dni and email and pais and description:
-        products.update_one({'name' : product_name}, {'$set' : {'name' : name,'lastName' : lastName, 'edad' : edad, 'dni' : dni, 'email' : email, 'pais' : pais,  'description' : description, }})
+    if name and lastName and dni and email and pais and message:
+        products.update_one({'name' : product_name}, {'$set' : {'name' : name,'lastName' : lastName, 'dni' : dni, 'email' : email, 'pais' : pais,  'message' : message, }})
         response = jsonify({'message' : 'Producto ' + product_name + ' actualizado correctamente'})
         return redirect(url_for('home'))
     else:

@@ -18,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <!--Title y keywords-->
         <title>Las Aucas</title>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 <body>
     
@@ -31,6 +32,7 @@
         <section class="form-register">
 
             <h5 class="text-center">Información de Contacto</h5>
+            <h6 class="text-center">Nos pondremos en contacto a la brevedad.</h6>
                             </div>
                             <div class="card-body" >
                                 <form action="/products" method="POST">
@@ -38,21 +40,18 @@
                                     <input type="text" class="form-control mb-3" name="name">
                                     <label>Apellido</label>
                                     <input type="text" class="form-control mb-3" name="lastName">
-                                    <label>Edad</label>
-                                    <input type="text" class="form-control mb-3" name="edad">
                                     <label>DNI</label>
                                     <input type="text" class="form-control mb-3" name="dni">
                                     <label>Email</label>
                                     <input type="text" class="form-control mb-3" name="email">
                                     <label>Pais</label>
                                     <input type="text" class="form-control mb-3" name="pais">
-                                    <label>Descripcion</label>
-                                    <input type="text" class="form-control mb-3" name ="description">
-                                    <div id="terminos">
-                                        <input type="checkbox" name="terminos" value="terminos" required>
-                                        <label>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></label>
-                                    </div>                               
-                                    <button class="boton btn-1 " type="submit">GUARDAR</button>
+                                    <label>Mensaje</label>
+                                    <input type="text" class="form-control mb-3" name ="message">
+                                    <div class="g-recaptcha" data-sitekey="6LexwAYpAAAAAOQTEiEgnSDgxO5jU6co9dsJrTz2"></div>
+                                    <br/>
+                                                              
+                                    <button class="boton btn-1 " type="submit" onclick="alert('GRACIAS POR TU CONSULTA! PRONTO TE CONTACTAREMOS!!!');">GUARDAR</button>
                                 </form>
                             </div>
         </section>

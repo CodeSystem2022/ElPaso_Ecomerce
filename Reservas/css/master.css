@@ -78,14 +78,39 @@ table {
   .list-services figure { display: flex; justify-content: center; align-items: center; flex-flow: column;}
 /* 2 GENERIC ITEMS */
 
-  .header { height: 450px; background: url(../images/diana9.jpg) no-repeat center top; background-size: cover;}
-  .navbar { height: 63px; background: rgb(2, 50, 15); border-bottom: 1px dashed #3498db;}
+  .header { height: 450px; background: rgb(255, 255, 255)  no-repeat center top; background-size: cover;}
+  .navbar { height: 63px; background: rgb(2, 50, 15); border-bottom: 1px dashed #000000;}
     .navbar a { padding: 0 20px; color: #fff; text-decoration: none; text-transform: uppercase; font: 20px 'Stint Ultra Condensed';}
     a:hover{color: rgb(194, 156, 3);}
     .title {margin-bottom: 40px; font: 60px 'Stint Ultra Condensed'; text-transform: uppercase;}
   p {margin-bottom: 40px;}
 
   .btn { border: 2px solid #fff; padding: 10px 40px; display: inline-block; text-decoration: none; color: #fff;}
+  .btn2 {
+    width: 200px;
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #dadd18;
+    color: rgb(223, 255, 148);
+    cursor: pointer;
+    background: linear-gradient(to right,  #dadd18 50%, transparent 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 0.5s;
+    position: absolute;
+    text-align: center;
+    padding: 10px 40px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    background-position: left;
+    color: black;
+    font-weight: 700;
+}
 
 /* 3 PARTS OF WEB */
   .content { padding: 80px 0;}

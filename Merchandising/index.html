@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Las Aucas</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>NUESTROS PRODUCTOS</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./carrito.html">Carrito</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="product-flex">
+      <div class="product">
+        <img src="./Assets/Images/Remera.jpg" alt="Producto 1">
+        <h3>Remera Las Aucas</h3>
+        <p>Precio: $7000</p>
+        <button onclick="agregarAlCarrito('Remera Las Aucas', 7000)">Agregar al Carrito</button>
+      </div>
+      <div class="product">
+        <img src="./Assets/Images/Gorra.jpg" alt="Producto 2">
+        <h3>Gorra Las Aucas</h3>
+        <p>Precio: $4000</p>
+        <button onclick="agregarAlCarrito('Gorra Las Aucas', 4000)">Agregar al Carrito</button>
+      </div>
+      <div class="product">
+        <img src="./Assets/Images/Tabla.png" alt="Producto 3">
+        <h3>Tabla Asado</h3>
+        <p>Precio: $6000</p>
+        <button onclick="agregarAlCarrito('Tabla Asado', 6000)">Agregar al Carrito</button>
+      </div>
+      <div class="product">
+        <img src="./Assets/Images/Mate.png" alt="Producto 4">
+        <h3>Mate</h3>
+        <p>Precio: $5000</p>
+        <button onclick="agregarAlCarrito('Mate', 5000)">Agregar al Carrito</button>
+      </div>
+      <!-- Agregar más productos -->
+    </main>
+
+    <footer>
+      <p>Todos los derechos reservados &copy; 2023 E-commerce El Paso - UTN San Rafael</p>
+    </footer>
+
+    <script>
+      function agregarAlCarrito(nombre, precio){
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.push({nombre, precio});
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        alert(`El producto "${nombre}" se agregó al carrito`)
+      }
+    </script>
+  </body>
+</html>

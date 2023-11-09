@@ -1,6 +1,9 @@
 
+*{text-decoration:none;}
+a{color:black;}
+
 body{
-    background: rgb(194, 156, 3);
+    background: rgb(48, 119, 67);
 }
 div {
   text-align: center;

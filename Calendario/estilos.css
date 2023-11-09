@@ -51,7 +51,7 @@ div {
     box-sizing: border-box;
     padding: 10px;
     margin: 5px;
-    background: #fff;
+    background: rgb(83, 143, 125);
     /* Inicialmente, deja que cada .month tome todo el ancho disponible */
     flex: 0 0 100%;
   }

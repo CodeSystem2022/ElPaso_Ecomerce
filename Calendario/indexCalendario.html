@@ -40,7 +40,7 @@
     }
   })
 
-  const html = calendar
+  const html = `<div class="month-container">` + calendar
     .map(({ daysOfMonth, monthName, startsOn }) => {
       const days = [...Array(daysOfMonth).keys()]
       const firstDayAttributes = `class='first-day' style='--first-day-start: ${startsOn}'`
@@ -53,7 +53,7 @@
             `<li ${index === 0 ? firstDayAttributes : ''}>${day + 1}</li>`
         )
         .join('')
-      return `<h2>${monthName} ${actualYear}</h2><ol>${htmlDaysName}${htmlDays}</ol>`
+      return  `<div class="month"><h2>${monthName} ${actualYear}</h2><ol>${htmlDaysName}${htmlDays}</ol></div>`
     })
     .join('')
 

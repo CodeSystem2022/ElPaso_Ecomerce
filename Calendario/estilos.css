@@ -41,12 +41,35 @@ div {
   .month-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Añade espacio alrededor de los elementos */
-    min-width: 1200px; /* Asegúrate de que el contenedor sea lo suficientemente ancho */
+    justify-content: space-around;
   }
   
   .month {
-    flex: 0 0 calc(33.333% - 10px); /* Tres meses por fila con un poco de margen */
-    margin: 5px;
     box-sizing: border-box;
+    padding: 10px;
+    margin: 5px;
+    background: #fff;
+    /* Inicialmente, deja que cada .month tome todo el ancho disponible */
+    flex: 0 0 100%;
+  }
+  
+  /* En pantallas pequeñas (tablets), permite que haya dos meses por fila */
+  @media (min-width: 600px) {
+    .month {
+      flex: 0 0 calc(50% - 10px); /* Ajusta el porcentaje y el espacio de margen */
+    }
+  }
+  
+  /* En pantallas más grandes (desktops), permite que haya tres meses por fila */
+  @media (min-width: 900px) {
+    .month {
+      flex: 0 0 calc(33.333% - 10px);
+    }
+  }
+  
+  /* Ajustes adicionales para pantallas aún más grandes, si es necesario */
+  @media (min-width: 1200px) {
+    .month {
+      flex: 0 0 calc(25% - 10px);
+    }
   }

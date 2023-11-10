@@ -72,7 +72,8 @@ table {
 
   .navbar { display: flex; justify-content: center; align-items: center; background: #abcdef; }
 
-  .tarifas { text-align: left; }
+  .tarifas { text-align: left
+; }
 
   .list-services {display: flex; align-items: center; justify-content: center;}
   .list-services figure { display: flex; justify-content: center; align-items: center; flex-flow: column;}

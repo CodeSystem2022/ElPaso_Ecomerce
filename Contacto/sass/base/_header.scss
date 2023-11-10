@@ -26,9 +26,17 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .logo img {
+      width: 25%; /* Reduce el tamaño del logo al 50% de su contenedor */
+    }
+  }
+
 /*Estilo del encabezado*/
 .headColor{
     background-color: #c24f1f;
     font-size: 1.5rem;
 }
+
+
 

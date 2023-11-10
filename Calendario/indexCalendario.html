@@ -4,60 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Calendario/estilos.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    
     <title>Calendario</title>
 </head>
-<body>
+<body class="cuerpo">
     <header>
-        <a href="/index1.html" class="logo">LAS AUCAS</a>
-        
-      </header>
+      <nav> 
+        <ul class="menu"> 
+          <li class="logo">
+            <a href="../index1.html"><img src="/Css/lasaucas.png" alt="logo" class=""></a>
+          </li> 
+          <li class="item">
+            <a href="#">Nosotros</a>
+          </li> 
+          <li class="item">
+            <a href="#">Experiencia</a>
+          </li> 
+          <li class="item">
+            <a href="#">El Lugar</a>
+          </li> 
+          <li class="item">
+            <a href="/Merchandising/index.html">Merchandising</a>
+          </li> 
+          <li class="item">
+            <a href="/Contacto/templates/index.html">Contacto</a> 
+          </li> 
+          <li class="item">
+            <a href="/Calendario/indexCalendario.html">Fechas Disponibles</a>
+          </li> 
+          <li class="item btn1">
+            <a href="/Reservas/index.html">Reservas</a>
+          </li> 
+          <li class="toggle">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li> 
+        </ul> 
+      </nav>
+    </header>
 
 
-<div></div>
+<div id="calendar"></div>
+<footer class="bg-dark text-light py-4">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-12 col-md-8 mx-auto">
+        <!-- Contenedor de aspecto para el iframe -->
+        <div class="ratio ratio-16x9">
+       
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20318.47457974145!2d-69.50232061667883!3d-34.681061103696244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sar!4v1694125170263!5m2!1ses-419!2sar" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+      </div>
+      <!-- Texto del footer centrado y con un margen superior para dispositivos pequeños -->
+      <div class="col-12 text-center mt-3 mt-md-0">
+        <p>Todos los derechos reservados &copy; 2023 E-commerce El Paso - UTN San Rafael</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
-<script>
-  const actualYear = 2024
-  const locale = 'es'
+<script src="calendario.js"></script>
 
-  const intlForMonths = new Intl.DateTimeFormat(locale, { month: 'long' })
-  const months = [...Array(12).keys()]
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  const intlForWeeks = new Intl.DateTimeFormat(locale, { weekday: 'short' })
-  const weekDays = [...Array(7).keys()].map((dayIndex) =>
-    intlForWeeks.format(new Date(2021, 2, dayIndex + 1))
-  )
-
-  const calendar = months.map((monthIndex) => {
-    const monthName = intlForMonths.format(new Date(actualYear, monthIndex))
-    const nextMonthIndex = (monthIndex + 1) % 12
-    const daysOfMonth = new Date(actualYear, nextMonthIndex, 0).getDate()
-    const startsOn = new Date(actualYear, monthIndex, 1).getDay()
-
-    return {
-      daysOfMonth,
-      monthName,
-      startsOn
-    }
-  })
-
-  const html = `<div class="month-container">` + calendar
-    .map(({ daysOfMonth, monthName, startsOn }) => {
-      const days = [...Array(daysOfMonth).keys()]
-      const firstDayAttributes = `class='first-day' style='--first-day-start: ${startsOn}'`
-      const htmlDaysName = weekDays
-        .map((dayName) => `<li class='day-name'>${dayName}</li>`)
-        .join('')
-      const htmlDays = days
-        .map(
-          (day, index) =>
-            `<li ${index === 0 ? firstDayAttributes : ''}>${day + 1}</li>`
-        )
-        .join('')
-      return  `<div class="month"><h2>${monthName} ${actualYear}</h2><ol>${htmlDaysName}${htmlDays}</ol></div>`
-    })
-    .join('')
-
-  document.querySelector('div').innerHTML = html
-</script>
 </body>
 </html>

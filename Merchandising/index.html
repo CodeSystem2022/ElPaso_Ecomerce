@@ -51,13 +51,6 @@
       <p>Todos los derechos reservados &copy; 2023 E-commerce El Paso - UTN San Rafael</p>
     </footer>
 
-    <script>
-      function agregarAlCarrito(nombre, precio){
-        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-        carrito.push({nombre, precio});
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        alert(`El producto "${nombre}" se agregó al carrito`)
-      }
-    </script>
+    <script src="/Merchandising/index.js"> </script>
   </body>
 </html>

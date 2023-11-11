@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-image: url('/Contacto/static/css/imagenes/cañon11.png');
   width:30%;
@@ -70,6 +71,9 @@ body {
 }
 
 
+.btn-1{
+  color: #000;
+}
 
 
 

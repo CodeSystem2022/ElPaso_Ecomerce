@@ -6,7 +6,7 @@ class Product:
         self.dni = dni
         self.email = email
         self.pais = pais
-        self.message = message                                     #HACEMOS CAMBIOS
+        self.message = message                                     
         self.orden = orden
 
 

@@ -72,8 +72,7 @@ table {
 
   .navbar { display: flex; justify-content: center; align-items: center; background: #abcdef; }
 
-  .tarifas { text-align: left
-; }
+  .tarifas { text-align: center;}
 
   .list-services {display: flex; align-items: center; justify-content: center;}
   .list-services figure { display: flex; justify-content: center; align-items: center; flex-flow: column;}
@@ -100,11 +99,14 @@ table {
     background-size: 200%;
     background-position: right;
     transition: background-position 0.5s;
-    position: absolute;
+    /*position: absolute;*/
     text-align: center;
     padding: 10px 40px;
     display: inline-block;
     text-decoration: none;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .btn2:hover {
@@ -122,7 +124,7 @@ table {
 
     .tarifas {background: url(../images/diana9.jpg) no-repeat center top; background-size: cover; color: #fff;}
       .contain {max-width: 1055px; margin: 0 auto;}
-      .tarifas p {max-width: 450px;}
+      .tarifas p {max-width: 450px; margin: auto;}
 
     .localization {background: rgb(2, 50, 15);color: #fff; padding-bottom: 0;}
       .localization .map img {max-width: 100%; width: 100%;}
